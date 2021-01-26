@@ -5,9 +5,13 @@
     cursor: pointer;
     font-size: 12px;
     padding: 7px 10px 7px 10px;
-
+    transition: color 0.3s ease;
     &:focus {
         outline: none;
+    }
+
+    &:hover {
+        color: darken($color: white, $amount: 15);
     }
 }
 
@@ -23,10 +27,9 @@
     }
 }
 
-.btn-block{
+.btn-block {
     width: 100%;
 }
-
 
 .google-btn {
     cursor: pointer;
@@ -37,7 +40,7 @@
     border-radius: 2px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
 
-    transition: box-shadow .3s ease;
+    transition: box-shadow 0.3s ease;
 
     .google-icon-wrapper {
         position: absolute;
