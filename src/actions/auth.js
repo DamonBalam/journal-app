@@ -2,6 +2,7 @@ import Swal from 'sweetalert2';
 
 import { firebase, googleAuthProvider } from '../firebase/firebase-config';
 import { types } from '../types/types';
+import { notesLogout } from './notes';
 import { finishLoading, startLoading } from './ui';
 
 // metodo para iniciar sesión con email y password
@@ -65,6 +66,7 @@ export const startLogout = () => {
     return async (dispatch) => {
         await firebase.auth().signOut();
         dispatch(logout());
+        dispatch( notesLogout() );
     };
 };
 

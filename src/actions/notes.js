@@ -100,12 +100,16 @@ export const startDeleting = (id) => {
 
         await db.doc(`${uid}/journal/notes/${id}`).delete();
 
-        // dispatch(  );
+        dispatch( deleteNote(id) );
     }
-}
+};
 
 
 export const deleteNote = ( id ) => ({
     type: types.notesDelete,
     payload: id
-})
+});
+
+export const notesLogout =  () => ({
+    type: types.notesLogoutCleaning
+});
