@@ -53,7 +53,7 @@ describe('Pruebas en el LoginScreen', () => {
     test('Debe de disparar la accion de startLoginEmailPassword', () => {
         wrapper.find('form').prop('onSubmit')({ preventDefault() {} });
 
-        expect(startLoginEmailPassword).toHaveBeenCalledWith('damon@gmail.com', '123456');
+        expect(startLoginEmailPassword).toHaveBeenCalledWith('', '');
     });
 
     
